@@ -13,6 +13,7 @@ export async function POST(
     req: Request,
 ) {
     try{
+        const model="dall-e-3";
         const {userId}=auth();
         const body= await req.json();
         const{prompt, amount=1, resolution="512x512"}=body;
